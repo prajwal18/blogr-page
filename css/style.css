@@ -1,0 +1,183 @@
+/* Some body and Mostly Header */
+
+:root{
+--light-red: hsl(356, 100%, 66%);
+--very-light-red: hsl(355, 100%, 74%);
+--very-dark-blue: hsl(208, 49%, 24%);
+
+--white: hsl(0, 0%, 100%);
+--grayish-blue: hsl(240, 2%, 79%);
+--very-dark-grayish-blue: hsl(207, 13%, 34%);
+--very-dark-black-blue: hsl(240, 10%, 16%);
+
+--very-light-red-two: hsl(13, 100%, 72%);
+--light-red-two: hsl(353, 100%, 62%);
+
+--very-dark-gray-blue: hsl(237, 17%, 21%);
+--very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 2000px;
+    min-width: 320px;
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3.2em;
+    color: var(--white);
+}
+ul{
+    list-style: none;
+}
+a{
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    padding: 70px 200px 100px;
+
+    background: url('../images/bg-pattern-intro.svg') no-repeat center, 
+    linear-gradient(90deg, var(--very-light-red-two), var(--light-red-two));
+    border-bottom-left-radius: 100px;
+}
+
+/* Header Nav */
+header nav{
+    width: 100%;
+    display: grid;
+    gap: 5em;
+    grid-template-columns: auto 1fr;
+    position: relative;
+}
+header nav > img.modal {
+    display: none;
+}
+header nav > div {
+    display: grid;
+    grid-template-columns:1fr auto ;
+    gap: 2em;
+}
+header nav img{
+    width: 100px;
+}
+
+/* Working in the navigation options */
+header nav > div > ul{
+    align-self: center;
+    display: flex;
+    gap: 3em;
+    justify-content: left;
+}
+header nav >  div > ul > li{
+    position: relative;
+    padding: 10px 0;
+}
+header nav > div > ul > li >a::after{
+    content: url('../images/icon-arrow-light.svg');
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+header nav:hover > div > ul > li:hover > a::after {
+    transform: rotate(180deg);
+}
+header nav > div > ul > li > a, a#login{
+    color: rgb(218, 218, 218);
+}
+header nav:hover > div > ul > li:hover > a{
+    color: var(--white);
+    text-decoration: underline;
+}
+header nav:hover > div > ul > li:hover > ul{
+    display: block;
+}
+
+/* Display on hover */
+header nav > div > ul > li > ul{
+    position: absolute;
+    top: 2.4em;
+    left: -2em;
+    padding: 1em;
+    width: 150px;
+
+    background: white;
+    border-radius: 10px;
+    line-height: 2;
+    display: none;
+}
+header nav > div > ul > li > ul > li a {
+    color: var(--very-dark-black-blue);
+    font-weight: 400;
+}
+header nav > div > ul > li > ul > li:hover > a {
+    font-weight: 700;
+}
+/* -------------  -------------  -----------  ---------  ----------  -------  ----------  --------- */
+
+/* Header Nav Div Login Signup */
+header nav div.login-signup {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    max-width: 200px;
+}
+header nav div.login-signup a#signup {
+    padding: 10px 30px;
+    background: var(--white);
+    color: var(--light-red);
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* Header Div Header Info */
+header div.header-info {
+    margin-top: 100px;
+    text-align: center;
+}
+header div.header-info p{
+    color: hsl(0, 0%, 93%);
+    font-size: 1.1em;
+}
+header div.header-info div.start-learn {
+    margin: 50px auto;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    max-width: 300px;
+}
+header div.header-info div.start-learn > a{
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: 1px solid var(--white);
+    font-weight: 700;
+}
+
+header div.header-info div.start-learn a#start-free {
+    background: var(--white);
+    color: var(--light-red);
+}
+header div.header-info div.start-learn a#learn-more {
+    color: var(--white);
+}
+
+

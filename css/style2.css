@@ -1,0 +1,369 @@
+/* The main body */
+:root{
+    --light-red: hsl(356, 100%, 66%);
+    --very-light-red: hsl(355, 100%, 74%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+    
+    --very-light-red-two: hsl(13, 100%, 72%);
+    --light-red-two: hsl(353, 100%, 62%);
+    
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+main{
+    line-height: 1.5;
+}
+
+h2{
+    font-size: 2.2em;
+    color: var(--very-dark-blue);
+    text-align: center;
+}
+h3{
+    font-size: 1.6em;
+    color: var(--very-dark-blue);
+}
+p{
+    color: var(--very-dark-grayish-blue);
+}
+section > p {
+    margin-top: 1em;
+}
+
+
+/* Div One */
+main div.one {
+    padding: 150px 200px;
+    background: url('../images/illustration-editor-desktop.svg') no-repeat;
+    background-position: top calc(50%) right -13rem;
+    background-size: 45rem;
+}
+main div.one div{
+    margin-top: 80px;
+    display: grid;
+    gap: 4em;
+    max-width: 50%;
+}
+img.bg-mobile {
+    display: none;
+}
+
+
+/* Div Two */
+main div.two {
+    padding: 100px 200px;
+    position: relative;
+    min-height: 22rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--very-dark-gray-blue) url('../images/bg-pattern-circles.svg') no-repeat;
+    background-position: top -22rem left -10rem;
+    background-size: 50rem;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+main div.two aside img {
+    position: absolute;
+    top: -3rem;
+    left: 150px;
+    height: 30rem;
+}
+
+main div.two section p{
+    color: var(--white);
+}
+main div.two section h3 {
+    font-size: 2em;
+    color: var(--white);
+}
+
+
+/* Div Three */
+main div.three {
+    min-height: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: url('../images/illustration-laptop-desktop.svg') no-repeat;
+    background-position: top calc(50%) left -13rem;
+    background-size: 45rem;
+
+    padding: 200px;
+}
+
+main div.three div {
+    display: grid;
+    gap: 4em;
+}
+img.bg-mobile{
+    width: 100%;
+}
+
+
+/* Footer Design */
+footer{
+    padding: 70px 200px;
+    background-color: var(--very-dark-black-blue);
+    border-top-right-radius: 100px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10em;
+}
+
+footer div ul li {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--grayish-blue);
+}
+
+footer > div > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+}
+footer ul  li {
+    line-height: 2;
+}
+footer > div > ul > li > a{
+    color: var(--white);
+}
+footer > div > ul > li > ul {
+    margin-top: 1em;
+}
+footer > div > ul > li > ul > li > a{
+    font-weight: 300;
+    color: rgb(192, 192, 192);
+}
+
+
+
+/* Smaller Screen */
+@media screen and (max-width: 1200px) {
+    header, main div.one,
+    main div.two,
+    main div.three{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    header nav > div > ul{
+        gap: 1.5em;
+    }
+    main div.one {
+        background-size: 43rem;
+    }
+    main div.three {
+        background-size: 43rem;
+    }
+    /*-------------------------------------*/
+    main div.two aside img {
+        left: 50px;
+    }
+    /*-------------------------------------*/
+    footer{
+        padding: 70px 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    header nav{
+        gap: 2em;
+    }
+    header nav > div > ul{
+        gap: 1em;
+    }
+    /*-------------------------------------*/
+    main div.one {
+        padding: 100px 50px;
+        background-position: top calc(50%) right -12rem;
+        background-size: 40rem;
+    }
+    /*-------------------------------------*/
+    main div.two {
+        padding: 100px 50px;
+        grid-template-columns: 6fr 8fr;
+        background-position: top -18rem left -8rem;
+        background-size: 40rem;
+    }
+    main div.two aside img {
+        top: 0rem;
+        left: 10px;
+        height: 22rem;
+    }
+    /*-------------------------------------*/
+    main div.three {
+        padding: 150px 50px;
+        grid-template-columns: 7fr 8fr;
+        background-position: top calc(50%) left -12rem;
+        background-size: 40rem;
+    }
+    /*-------------------------------------*/
+    footer{
+        padding: 70px 50px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    main div.one{
+        background-position:  top calc(50%) right -11rem;
+        background-size: 35rem;
+    }
+    /*-------------------------------------*/
+    main div.two {
+        padding: 50px;
+    }
+    /*-------------------------------------*/
+    main div.three {
+        background-position:  top calc(50%) left -11rem;
+        background-size: 35rem;
+    }
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 800px) {
+    /* Designing the modal */
+    header > nav > img.modal {
+        display: block;
+        height: 2rem;
+        width: 3rem;
+        justify-self: right;
+        cursor: pointer;
+    }
+    header > nav > div.inner-container {
+        position: absolute;
+        top: 70px;
+        background: var(--white);
+        width: 100%;
+        padding: 1em;
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+        text-align: center;
+    }
+    header nav > div > ul{
+        padding-bottom: 20px;
+        flex-flow: column wrap;
+        width: 100%;
+        justify-content: center;
+
+        border-bottom: 1px solid var(--grayish-blue);
+    }
+
+    header nav > div > ul > li >a::after{
+        content: url('../images/icon-arrow-dark.svg');
+    }
+    header nav > div > ul > li > a, a#login{
+        color: var(--very-dark-blue)
+    }
+    header nav:hover > div > ul > li:hover > a{
+        color: var(--very-dark-grayish-blue);
+        text-decoration: none;
+    }
+    header nav:hover > div > ul > li:hover > ul{
+        display: none;
+    }
+    header nav:hover > div > ul > li:hover > a::after {
+        transform: rotate(0deg);
+    }
+
+
+    /* On Click the nav Drop down*/
+    header nav:hover > div > ul > li.clicked > ul{
+        display: block;
+    }
+    header nav:hover > div > ul > li.clicked > a::after {
+        transform: rotate(180deg);
+    }
+    /*-------------------------------------------*/
+
+
+    header nav > div > ul > li > ul {
+        display: none;
+        position: relative;
+        top: 0; left: 0;
+        width: 100%;
+        background: var(--grayish-blue);
+    }
+    header nav > div > ul > li > ul > li > a {
+        color: var(--very-dark-grayish-blue);
+    }
+    /* Modal Login sign up */
+    header nav div.login-signup {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-self: center;
+    }
+    header nav div.login-signup a#signup {
+        padding: 10px 30px;
+        background: var(--light-red);
+        color: var(--white);
+        border-radius: 30px;
+        font-weight: 700;
+    }
+
+    /* Removing the background images */
+    main{
+        text-align: center;
+    }
+    main div.one, main div.three {
+        background: none;
+    }
+    main div.one div{
+        max-width: 100%;
+    }
+    /*------ ------ ------- ------ ------*/
+    img.bg-mobile {
+        display: block;
+        justify-self: center;
+    }
+
+    main div.two {
+        padding: 50px;
+        margin-top: 10rem;
+        grid-template-columns: 1fr;
+        background-position: top -18rem center;
+    }
+    main div.two aside img {
+        top: -10rem;
+        left: calc(50% - 11rem);
+    }
+    main div.two section {
+        margin-top: 10rem;
+    }
+
+    main div.three {
+        display: block;
+    }
+
+
+    /* Footer area complete */
+    footer{
+        padding: 70px 20px;
+        grid-template-columns: auto;
+        gap: 5em;
+    }
+    footer img {
+        justify-self: center;
+    }
+    footer > div > ul {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
