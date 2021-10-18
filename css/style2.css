@@ -141,6 +141,9 @@ footer > div > ul > li > ul > li > a{
     font-weight: 300;
     color: rgb(192, 192, 192);
 }
+footer > div > ul > li > ul > li > a:hover{
+    text-decoration: underline;
+}
 
 
 

@@ -147,6 +147,10 @@ header nav div.login-signup a#signup {
     border-radius: 30px;
     font-weight: 700;
 }
+header nav div.login-signup a#signup:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
 
 /* Header Div Header Info */
 header div.header-info {
@@ -176,8 +180,17 @@ header div.header-info div.start-learn a#start-free {
     background: var(--white);
     color: var(--light-red);
 }
+header div.header-info div.start-learn a#start-free:hover{
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    border:none;
+}
 header div.header-info div.start-learn a#learn-more {
     color: var(--white);
+}
+header div.header-info div.start-learn a#learn-more:hover{
+    background: var(--white);
+    color: var(--light-red);
 }
 
 
