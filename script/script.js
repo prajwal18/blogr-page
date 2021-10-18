@@ -5,8 +5,8 @@ const navMobilePart = document.querySelector('div.inner-container');
 toggle.forEach(tog => {
     tog.addEventListener('click', () => {
         tog.parentElement.classList.toggle('clicked');
-    })
-})
+    });
+});
 
 modal.addEventListener('click', () => {
     //Only apply to smaller screen below 800px width
@@ -16,6 +16,10 @@ modal.addEventListener('click', () => {
     } else {
         modal.setAttribute('src', 'images/icon-close.svg');
         navMobilePart.setAttribute('style', 'display: grid;');
+        //Reset the modal after it is closed
+        toggle.forEach(tog => {
+            tog.parentElement.classList.remove('clicked');
+        })
     }
 
 });
