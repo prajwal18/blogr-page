@@ -265,23 +265,23 @@ footer > div > ul > li > ul > li > a{
     header nav > div > ul > li > a, a#login{
         color: var(--very-dark-blue)
     }
-    header nav:hover > div > ul > li:hover > a{
+    header nav > div > ul > li:hover > a{
         color: var(--very-dark-grayish-blue);
         text-decoration: none;
     }
-    header nav:hover > div > ul > li:hover > ul{
+    header nav > div > ul > li:hover > ul{
         display: none;
     }
-    header nav:hover > div > ul > li:hover > a::after {
+    header nav > div > ul > li:hover > a::after {
         transform: rotate(0deg);
     }
 
 
     /* On Click the nav Drop down*/
-    header nav:hover > div > ul > li.clicked > ul{
+    header nav > div > ul > li.clicked > ul{
         display: block;
     }
-    header nav:hover > div > ul > li.clicked > a::after {
+    header nav > div > ul > li.clicked > a::after {
         transform: rotate(180deg);
     }
     /*-------------------------------------------*/

@@ -96,17 +96,17 @@ header nav > div > ul > li >a::after{
     position: relative;
     top: -1px;
 }
-header nav:hover > div > ul > li:hover > a::after {
+header nav > div > ul > li:hover > a::after {
     transform: rotate(180deg);
 }
 header nav > div > ul > li > a, a#login{
     color: rgb(218, 218, 218);
 }
-header nav:hover > div > ul > li:hover > a{
+header nav > div > ul > li:hover > a{
     color: var(--white);
     text-decoration: underline;
 }
-header nav:hover > div > ul > li:hover > ul{
+header nav > div > ul > li:hover > ul{
     display: block;
 }
 
